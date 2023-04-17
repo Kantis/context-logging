@@ -1,0 +1,22 @@
+package conventions.lang
+
+import conventions.BuildLogicSettings
+
+plugins {
+   id("conventions.lang.kotlin-multiplatform-base")
+}
+
+val settings = extensions.getByType<BuildLogicSettings>()
+
+if (settings.enableKotlinJs.get()) {
+   kotlin {
+      targets {
+         js(IR) {
+            browser()
+            nodejs()
+         }
+      }
+   }
+
+   relocateKotlinJsStore()
+}

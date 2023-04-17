@@ -1,27 +1,30 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
-// Note: AWS supports only JDK 11 for Lambdas so far
-val targetJdk = JavaVersion.VERSION_17
-
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
-    kotlin("jvm") version "1.8.20"
+   id("conventions.base")
+   idea
+   alias(libs.plugins.kotlinBinaryCompatibilityValidator)
 }
 
-repositories {
-    mavenCentral()
-}
+group = "com.github.kantis"
 
-dependencies {
-    testImplementation(libs.kotest.runner.junit5)
-    testImplementation(libs.kotest.property)
-}
+idea {
+   module {
+      isDownloadSources = true
+      isDownloadJavadoc = false
+      excludeDirs = excludeDirs + layout.files(
+         ".idea",
+         "gradle/kotlin-js-store", // location of the lock file, overridden by Kotlin/JS convention
+         "gradle/wrapper",
+      )
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions {
-        jvmTarget = targetJdk.toString()
-    }
-}
-
-tasks.withType<Test> {
-    useJUnitPlatform()
+      // exclude generated Gradle code, so it doesn't clog up search results
+      excludeDirs.addAll(
+         layout.files(
+            "build-logic/build/generated-sources/kotlin-dsl-accessors/kotlin/gradle",
+            "build-logic/build/generated-sources/kotlin-dsl-external-plugin-spec-builders/kotlin/gradle",
+            "build-logic/build/generated-sources/kotlin-dsl-plugins/kotlin",
+            "build-logic/build/pluginUnderTestMetadata",
+         ),
+      )
+   }
 }

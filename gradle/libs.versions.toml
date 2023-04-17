@@ -1,11 +1,12 @@
 [versions]
 kotest = "5.6.0"
+slf4j = "1.7.36"
 
 
 [libraries]
 kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
 kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
-
+slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
 
 [bundles]
 

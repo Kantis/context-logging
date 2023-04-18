@@ -1,6 +1,8 @@
 public final class com/github/kantis/contextlogging/kotest/ContainExactlyKt {
 	public static final fun containExactly ([Lcom/github/kantis/contextlogging/kotest/ExpectedLogEvent;)Lio/kotest/matchers/Matcher;
+	public static final fun shouldContain (Ljava/util/List;Lcom/github/kantis/contextlogging/kotest/ExpectedLogEvent;)Ljava/util/List;
 	public static final fun shouldContainExactly (Ljava/util/List;Ljava/util/List;)V
+	public static final fun shouldContainExactly (Ljava/util/List;[Lcom/github/kantis/contextlogging/kotest/ExpectedLogEvent;)V
 }
 
 public final class com/github/kantis/contextlogging/kotest/ExpectedLogEvent {

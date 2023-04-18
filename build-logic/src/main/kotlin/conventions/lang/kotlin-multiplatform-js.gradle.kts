@@ -16,6 +16,19 @@ if (settings.enableKotlinJs.get()) {
             nodejs()
          }
       }
+
+      sourceSets {
+         val commonMain by getting {}
+         val commonTest by getting {}
+
+         val jsMain by getting {
+            dependsOn(commonMain)
+         }
+
+         val jsTest by getting {
+            dependsOn(commonTest)
+         }
+      }
    }
 
    relocateKotlinJsStore()

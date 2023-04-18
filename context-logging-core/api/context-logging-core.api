@@ -1,0 +1,75 @@
+public abstract interface class com/github/kantis/contextlogging/LogEvent {
+	public abstract fun getLevel ()Lcom/github/kantis/contextlogging/LogLevel;
+	public abstract fun getMessageFn ()Lkotlin/jvm/functions/Function0;
+}
+
+public final class com/github/kantis/contextlogging/LogEvent$Message : com/github/kantis/contextlogging/LogEvent {
+	public fun <init> (Lcom/github/kantis/contextlogging/LogLevel;Lkotlin/jvm/functions/Function0;)V
+	public final fun component1 ()Lcom/github/kantis/contextlogging/LogLevel;
+	public final fun component2 ()Lkotlin/jvm/functions/Function0;
+	public final fun copy (Lcom/github/kantis/contextlogging/LogLevel;Lkotlin/jvm/functions/Function0;)Lcom/github/kantis/contextlogging/LogEvent$Message;
+	public static synthetic fun copy$default (Lcom/github/kantis/contextlogging/LogEvent$Message;Lcom/github/kantis/contextlogging/LogLevel;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)Lcom/github/kantis/contextlogging/LogEvent$Message;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getLevel ()Lcom/github/kantis/contextlogging/LogLevel;
+	public fun getMessageFn ()Lkotlin/jvm/functions/Function0;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/github/kantis/contextlogging/LogEvent$WithThrowable : com/github/kantis/contextlogging/LogEvent {
+	public fun <init> (Lcom/github/kantis/contextlogging/LogLevel;Ljava/lang/Throwable;Lkotlin/jvm/functions/Function0;)V
+	public final fun component1 ()Lcom/github/kantis/contextlogging/LogLevel;
+	public final fun component2 ()Ljava/lang/Throwable;
+	public final fun component3 ()Lkotlin/jvm/functions/Function0;
+	public final fun copy (Lcom/github/kantis/contextlogging/LogLevel;Ljava/lang/Throwable;Lkotlin/jvm/functions/Function0;)Lcom/github/kantis/contextlogging/LogEvent$WithThrowable;
+	public static synthetic fun copy$default (Lcom/github/kantis/contextlogging/LogEvent$WithThrowable;Lcom/github/kantis/contextlogging/LogLevel;Ljava/lang/Throwable;Lkotlin/jvm/functions/Function0;ILjava/lang/Object;)Lcom/github/kantis/contextlogging/LogEvent$WithThrowable;
+	public fun equals (Ljava/lang/Object;)Z
+	public fun getLevel ()Lcom/github/kantis/contextlogging/LogLevel;
+	public fun getMessageFn ()Lkotlin/jvm/functions/Function0;
+	public final fun getThrowable ()Ljava/lang/Throwable;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/github/kantis/contextlogging/LogLevel : java/lang/Enum {
+	public static final field DEBUG Lcom/github/kantis/contextlogging/LogLevel;
+	public static final field ERROR Lcom/github/kantis/contextlogging/LogLevel;
+	public static final field INFO Lcom/github/kantis/contextlogging/LogLevel;
+	public static final field TRACE Lcom/github/kantis/contextlogging/LogLevel;
+	public static final field WARN Lcom/github/kantis/contextlogging/LogLevel;
+	public static fun valueOf (Ljava/lang/String;)Lcom/github/kantis/contextlogging/LogLevel;
+	public static fun values ()[Lcom/github/kantis/contextlogging/LogLevel;
+}
+
+public abstract interface class com/github/kantis/contextlogging/LoggingContext {
+	public abstract fun debug (Ljava/lang/Throwable;Lkotlin/jvm/functions/Function0;)V
+	public abstract fun debug (Lkotlin/jvm/functions/Function0;)V
+	public abstract fun error (Ljava/lang/Throwable;Lkotlin/jvm/functions/Function0;)V
+	public abstract fun error (Lkotlin/jvm/functions/Function0;)V
+	public abstract fun info (Ljava/lang/Throwable;Lkotlin/jvm/functions/Function0;)V
+	public abstract fun info (Lkotlin/jvm/functions/Function0;)V
+	public abstract fun trace (Ljava/lang/Throwable;Lkotlin/jvm/functions/Function0;)V
+	public abstract fun trace (Lkotlin/jvm/functions/Function0;)V
+	public abstract fun warn (Ljava/lang/Throwable;Lkotlin/jvm/functions/Function0;)V
+	public abstract fun warn (Lkotlin/jvm/functions/Function0;)V
+}
+
+public final class com/github/kantis/contextlogging/TestLoggingContext : com/github/kantis/contextlogging/LoggingContext {
+	public fun <init> ()V
+	public fun debug (Ljava/lang/Throwable;Lkotlin/jvm/functions/Function0;)V
+	public fun debug (Lkotlin/jvm/functions/Function0;)V
+	public fun error (Ljava/lang/Throwable;Lkotlin/jvm/functions/Function0;)V
+	public fun error (Lkotlin/jvm/functions/Function0;)V
+	public final fun getRecordedLogs ()Ljava/util/List;
+	public fun info (Ljava/lang/Throwable;Lkotlin/jvm/functions/Function0;)V
+	public fun info (Lkotlin/jvm/functions/Function0;)V
+	public fun trace (Ljava/lang/Throwable;Lkotlin/jvm/functions/Function0;)V
+	public fun trace (Lkotlin/jvm/functions/Function0;)V
+	public fun warn (Ljava/lang/Throwable;Lkotlin/jvm/functions/Function0;)V
+	public fun warn (Lkotlin/jvm/functions/Function0;)V
+}
+
+public final class com/github/kantis/contextlogging/TestLoggingContextKt {
+	public static final fun withTestLogging (Lkotlin/jvm/functions/Function1;)Ljava/util/List;
+}
+

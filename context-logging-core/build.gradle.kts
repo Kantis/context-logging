@@ -5,8 +5,19 @@ plugins {
    id("conventions.publishing.maven-publish")
 }
 
-dependencies {
-   implementation(libs.slf4j.api)
-   testImplementation(libs.kotest.runnerJunit5)
-   testImplementation(libs.kotest.property)
+kotlin {
+   sourceSets {
+      val commonMain by getting {
+         dependencies {
+            implementation(libs.kotest.assertionsCore)
+         }
+      }
+
+      val commonTest by getting {
+         dependencies {
+            implementation(libs.kotest.frameworkEngine)
+            implementation(libs.kotest.property)
+         }
+      }
+   }
 }

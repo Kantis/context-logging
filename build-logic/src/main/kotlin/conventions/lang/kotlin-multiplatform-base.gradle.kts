@@ -16,9 +16,7 @@ plugins {
 // This plugin does not enable any Kotlin target. To enable a target in a subproject, prefer
 // applying specific Kotlin target convention plugins.
 
-
 val settings = extensions.getByType<BuildLogicSettings>()
-
 
 kotlin {
    jvmToolchain {
@@ -30,6 +28,7 @@ kotlin {
          kotlinOptions {
             apiVersion = settings.kotlinTarget.get()
             languageVersion = settings.kotlinTarget.get()
+            freeCompilerArgs = listOf("-Xcontext-receivers")
          }
       }
    }
@@ -57,7 +56,7 @@ KotlinPlatformType.values().forEach { kotlinPlatform ->
 
    val testKotlinTargetLifecycleTask = tasks.create("allKotlin${kotlinPlatformName}Tests") {
       group = LifecycleBasePlugin.VERIFICATION_GROUP
-      description = "Run all Kotlin/${kotlinPlatformName} tests"
+      description = "Run all Kotlin/$kotlinPlatformName tests"
    }
 
    kotlin.testableTargets.matching {

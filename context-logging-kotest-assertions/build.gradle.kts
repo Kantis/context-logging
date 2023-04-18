@@ -11,12 +11,15 @@ kotlin {
          dependencies {
             implementation(projects.contextLoggingCore)
             implementation(libs.slf4j.api)
+            implementation(libs.kotest.assertionsApi)
             implementation(libs.kotest.assertionsCore)
+            implementation(libs.kotest.frameworkEngine)
          }
       }
 
       val commonTest by getting {
          dependencies {
+            implementation(kotlin("test"))
             implementation(libs.kotest.frameworkEngine)
             implementation(libs.kotest.property)
          }

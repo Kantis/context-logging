@@ -1,9 +1,16 @@
 package com.github.kantis.contextlogging.kotest
 
 import com.github.kantis.contextlogging.LogEvent
+import io.kotest.inspectors.forOne
 import io.kotest.matchers.Matcher
 import io.kotest.matchers.MatcherResult
 import io.kotest.matchers.should
+
+fun List<LogEvent>.shouldContain(expectedLogEvent: ExpectedLogEvent) =
+   forOne { it should equal(expectedLogEvent) }
+
+fun List<LogEvent>.shouldContainExactly(vararg expectedLogEvents: ExpectedLogEvent) =
+   this should containExactly(*expectedLogEvents)
 
 infix fun List<LogEvent>.shouldContainExactly(expectedLogEvents: List<ExpectedLogEvent>) =
    this should containExactly(*expectedLogEvents.toTypedArray())

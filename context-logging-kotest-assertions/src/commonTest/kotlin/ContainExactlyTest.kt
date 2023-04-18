@@ -1,3 +1,5 @@
+import com.github.kantis.contextlogging.LogLevel.ERROR
+import com.github.kantis.contextlogging.LogLevel.INFO
 import com.github.kantis.contextlogging.LoggingContext
 import com.github.kantis.contextlogging.kotest.invoke
 import com.github.kantis.contextlogging.kotest.shouldContainExactly
@@ -5,8 +7,6 @@ import com.github.kantis.contextlogging.withTestLogging
 import io.kotest.assertions.shouldFail
 import io.kotest.core.spec.style.FreeSpec
 import io.kotest.matchers.shouldBe
-import org.slf4j.event.Level.ERROR
-import org.slf4j.event.Level.INFO
 
 class ContainExactlyTest : FreeSpec(
    {

@@ -9,7 +9,7 @@ import org.jetbrains.kotlin.gradle.testing.KotlinTaskTestRun
 plugins {
    id("conventions.base")
    kotlin("multiplatform")
-   // id("io.kotest.multiplatform")
+   id("io.kotest.multiplatform")
 }
 
 // Base configuration for all Kotlin/Multiplatform conventions.

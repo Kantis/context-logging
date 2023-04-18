@@ -24,14 +24,6 @@ kotlin {
             implementation(libs.kotest.property)
          }
       }
-
-      if (contextLoggingSettings.enableKotlinJvm.get()) {
-         val jvmTest by getting {
-            dependencies {
-               implementation(libs.kotest.runnerJunit5)
-            }
-         }
-      }
    }
 }
 

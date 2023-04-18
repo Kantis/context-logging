@@ -12,4 +12,5 @@ dependencies {
    implementation(libs.gradlePlugin.ktlint)
    implementation(libs.gradlePlugin.testlogger)
    implementation(libs.gradlePlugin.detekt)
+   implementation(libs.gradlePlugin.kotest)
 }

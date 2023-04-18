@@ -17,6 +17,7 @@ gradlePlugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", ve
 gradlePlugin-ktlint = { module = "org.jlleitschuh.gradle:ktlint-gradle", version = "11.3.1" }
 gradlePlugin-testlogger = { module = "com.adarshr:gradle-test-logger-plugin", version = "3.2.0" }
 gradlePlugin-detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version = "1.22.0" }
+gradlePlugin-kotest = { module = "io.kotest:kotest-framework-multiplatform-plugin-gradle", version.ref = "kotest" }
 
 [bundles]
 

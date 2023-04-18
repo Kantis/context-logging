@@ -9,10 +9,10 @@ on:
             default: ''
             type: string
 
-#   workflow_run:
-#      workflows: [ "build" ]
-#      types:
-#         - completed
+   workflow_run:
+      workflows: [ "build" ]
+      types:
+         - completed
 
 
 concurrency:

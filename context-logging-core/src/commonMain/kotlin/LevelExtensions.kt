@@ -1,4 +1,4 @@
-package com.github.kantis.contextlogging
+package io.github.kantis.contextlogging
 
 // Provide extension on Slf4J log levels: Level.INFO { "message"  }
 // Note: These extensions only construct data, they do not actually log anything.

@@ -1,4 +1,4 @@
-package com.github.kantis.contextlogging
+package io.github.kantis.contextlogging
 
 public class TestLoggingContext : LoggingContext {
    val recordedLogs: MutableList<LogEvent> = mutableListOf()

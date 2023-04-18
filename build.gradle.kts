@@ -5,7 +5,7 @@ plugins {
    alias(libs.plugins.kotlinBinaryCompatibilityValidator)
 }
 
-group = "com.github.kantis"
+group = "io.github.kantis"
 
 idea {
    module {

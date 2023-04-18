@@ -1,6 +1,6 @@
-package com.github.kantis.contextlogging.kotest
+package io.github.kantis.contextlogging.kotest
 
-import com.github.kantis.contextlogging.LogEvent
+import io.github.kantis.contextlogging.LogEvent
 import io.kotest.inspectors.forOne
 import io.kotest.matchers.Matcher
 import io.kotest.matchers.MatcherResult

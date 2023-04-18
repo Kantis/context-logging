@@ -1,4 +1,4 @@
-import com.github.kantis.contextlogging.LoggingContext
+import io.github.kantis.contextlogging.LoggingContext
 import org.slf4j.Logger
 
 public class Slf4jLoggingContext(private val delegate: Logger) : LoggingContext {

@@ -1,4 +1,4 @@
-package com.github.kantis.contextlogging
+package io.github.kantis.contextlogging
 
 interface LoggingContext {
    fun info(messageFn: () -> String)

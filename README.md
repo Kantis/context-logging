@@ -32,6 +32,15 @@ fun logHello() {
 }
 ```
 
+To create a `LoggingContext`, send a `Slf4jLogger` to the `LoggingContext` constructor.
+```kotlin
+fun main() {
+    with(Slf4jLoggingContext(LoggerFactory.getLogger("my-logger"))) {
+        logHello()
+    }
+}
+```
+
 ### Testing logging
 There's a function called `withTestLogging` which provides a recording logging context. It results in a `List<LogEvent>`, for which
 there's convenient assertions added in the `context-logging-kotest-assertions` module.

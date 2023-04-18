@@ -7,7 +7,7 @@ plugins {
 
 kotlin {
    sourceSets {
-      val commonMain by getting {
+      commonMain {
          dependencies {
             implementation(projects.contextLoggingCore)
             implementation(libs.slf4j.api)
@@ -17,7 +17,7 @@ kotlin {
          }
       }
 
-      val commonTest by getting {
+      commonTest {
          dependencies {
             implementation(kotlin("test"))
             implementation(libs.kotest.frameworkEngine)

@@ -7,13 +7,13 @@ plugins {
 
 kotlin {
    sourceSets {
-      val commonMain by getting {
+      commonMain {
          dependencies {
             implementation(libs.kotest.assertionsCore)
          }
       }
 
-      val commonTest by getting {
+      commonTest {
          dependencies {
             implementation(libs.kotest.frameworkEngine)
             implementation(libs.kotest.property)

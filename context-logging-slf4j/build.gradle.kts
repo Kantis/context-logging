@@ -6,7 +6,7 @@ plugins {
 kotlin {
    sourceSets {
       if (contextLoggingSettings.enableKotlinJvm.get()) {
-         val jvmMain by getting {
+         jvmMain {
             dependencies {
                api(projects.contextLoggingCore)
                implementation(libs.slf4j.api)

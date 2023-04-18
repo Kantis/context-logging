@@ -1,4 +1,4 @@
-public final class Slf4jLoggingContext : com/github/kantis/contextlogging/LoggingContext {
+public final class Slf4jLoggingContext : io/github/kantis/contextlogging/LoggingContext {
 	public fun <init> (Lorg/slf4j/Logger;)V
 	public fun debug (Ljava/lang/Throwable;Lkotlin/jvm/functions/Function0;)V
 	public fun debug (Lkotlin/jvm/functions/Function0;)V
